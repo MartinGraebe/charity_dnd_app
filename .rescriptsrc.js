@@ -1,0 +1,1 @@
+module.exports = [require.resolve('./src/.webpack.config.js')]
