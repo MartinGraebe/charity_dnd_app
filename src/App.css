@@ -58,57 +58,38 @@ input[type=checkbox] {
 
   display: flex;
   height: auto;
-  justify-content: start;
+  justify-content: center;
   flex-direction: row;
- 
-  
-  
+  align-items: center;
   
 }
 .sub-content{
   display: flex;
-  
-  justify-content: start;
+  height: auto;
+  justify-content: center;
   flex-direction: column;
-
+  align-items: center;
   margin-top: 10px;
 }
 .centeredButton {
 
  color: red;
 }
-.list-wrapper{
-  height: 100%;
-  width: 100%;
-  border: 1px solid black;
-  margin-left: 10px;
-  padding-left: 10px;
-}
 .list {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  
-  
-    
-
- 
-}
-.select-wrapper{
-  flex: 1 1 20%;
   height: auto;
-  margin-top: 3px;
-  justify-content: flex-start;
-
+  margin-left: 10px;
+  flex-direction: column;
+    justify-content: flex-start;
+ border: 1px solid #000;
+  padding-left: 10px;
 }
 .select-item{
   display: flex;
   height: auto;
-  width: auto;
   flex-direction: row;
   justify-content: flex-start;
   margin-right: 3px;
-
 
  
 }
@@ -120,8 +101,6 @@ input[type=checkbox] {
 .Button-hold {
   display: flex; 
   flex-direction: row;
-  justify-content: flex-start;
- 
   
 }
 .myButton {
@@ -171,7 +150,6 @@ input[type=checkbox] {
   height: auto;
  
   margin: 10px;
-  margin-bottom: 1px;
   flex-direction: column;
   justify-content: flex-start;
 
@@ -200,7 +178,6 @@ input[type=checkbox] {
 }
 .labels{
   margin: 10px;
-  margin-top: 2px;
  
   
 }
@@ -219,7 +196,6 @@ input[type=checkbox] {
 .progressContainer{
   display: flex;
   margin: 80px;
-  margin-top: 5px;
   background-color: green;
   justify-content: center;
   width: 50%;
@@ -241,25 +217,4 @@ input[type=checkbox] {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  
-  
-  width: auto;
-}
-.progressList{
-  display: flex;
-  height: auto;
-  margin-left: 10px;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 1px solid #000;
-  padding-left: 10px;
-}
-.optionsList{
-  display: flex;
-  height: 50%;
-  margin-left: 10px;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 1px solid #000;
-  padding-left: 10px;
 }
