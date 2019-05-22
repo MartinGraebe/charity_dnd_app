@@ -332,10 +332,16 @@ import { createConfigItem } from '@babel/core';
    async handleSubmit(event){
 
         let temp = this.state.elementCache
-        let n = temp.length - 1
-        let ID = temp[n].id
+        let n
+        if (temp.length > 0) { n = temp.length - 1} else n = 0
+      
+        
+        let time = new Date()
+        let now = time.getMilliseconds()
+        let minutes = time.getMinutes()
+        let random = Math.floor(Math.random() * 20 * now + minutes)
 
-        let add = {id: n+2, label: this.state.newItemTitle, fullText: this.state.textStuff, fillStyle: "#eae56f", inUse: false }
+        let add = {id: n+random, label: this.state.newItemTitle, fullText: this.state.textStuff, fillStyle: "#eae56f", inUse: false }
 
        
        let array = this.state.elementCache
@@ -382,6 +388,7 @@ import { createConfigItem } from '@babel/core';
                         height={this.state.canvasHeight}
                         ref="canvas"
                     /> 
+                  
                     <img className="pointer" src={arrow} alt="V"  />
                   
                     </div>
@@ -392,13 +399,9 @@ import { createConfigItem } from '@babel/core';
                     {  this.state.wheelCreated && ! this.state.wheelSpinning ? <button className="myButton" onClick={this.startWheel}>Start</button> : null }
                     {  this.state.wheelCreated && this.state.wheelSpinning ? <button className="myButton" onClick={this.resetWheel}>Reset</button> : null }
                     <TwitchBotAdmin ref="TwitchBotAdmin" />
-                    </div>
-                    <div >
-            
-                        
-
-
-                    </div>
+                </div>
+           
+                  
                   
                     <div>
                     <form className="form-list" onSubmit={this.handleSubmit}>     
@@ -418,15 +421,7 @@ import { createConfigItem } from '@babel/core';
                         </div>
                
                     </div>
-                   
-                </div>
-                
-                <div className="list">
-                        {wheelItems}
-                        
-                    </div>
-
-                <div className="list">
+                    <div className="optionsList">
                     <div className="option">
                     <label> Chroma Key: </label>
                         <input type="text" name="chroma" value={this.state.chromaColour} onChange={this.handleChangeChroma} />
@@ -445,6 +440,16 @@ import { createConfigItem } from '@babel/core';
                     </div>
                     <button className="configButton" onClick={this.saveConfig}>Save Config</button>
                 </div>
+                   
+                </div>
+                
+               <div className="list-wrapper">
+                <div className="list">
+                        {wheelItems}
+                        
+                    </div>
+                    </div>
+               
                 
                
     
