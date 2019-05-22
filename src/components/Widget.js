@@ -170,9 +170,8 @@ class Widget extends React.Component {
                                 <div className="labels">
                                         <label>{this.state.currency}{this.state.raisedAmount}</label>  
                                     </div>
-                                    <Progress 
-                                        percent={this.state.percentageRaised}  
-                                        theme={
+                                  {(this.state.percentageRaised > 100)  ? <Progress percent="100" 
+                                         theme={
                                             {
                                             
                                             active: {
@@ -180,12 +179,32 @@ class Widget extends React.Component {
                                                 trailColor: this.state.trailColor,
                                                 color: this.state.strokeColor
                                             }
+                                            ,
+                                                success: {
+                                                    
+                                                    trailColor: this.state.trailColor,
+                                                    color: this.state.strokeColor
+                                                  },
                                             }
                                         }
-                                        
-                                        
-                                        
-                                        />
+                                   /> : <Progress percent={this.state.percentageRaised} 
+                                            theme={
+                                                {
+                                                
+                                                active: {
+                                                    
+                                                    trailColor: this.state.trailColor,
+                                                    color: this.state.strokeColor
+                                                },
+                                                success: {
+                                                    
+                                                    trailColor: this.state.trailColor,
+                                                    color: this.state.strokeColor
+                                                  },
+                                                }
+                                            }
+                                    />} 
+                               
                                     <div className="labels">
                                         <label>{this.state.currency}{this.state.targetAmount}</label>  
                                     </div>
@@ -202,7 +221,7 @@ class Widget extends React.Component {
                     </div>
                  
                 </div>
-                <div className="list">
+                <div className="progressList">
                         <div className="option">
                         <label> Chroma Key: </label>
                             <input type="text" name="chroma" value={this.state.chromaColour} onChange={this.handleChangeChroma} />
