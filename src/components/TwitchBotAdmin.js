@@ -1,5 +1,5 @@
 import React from 'react'
-import wildMagic from './wildMagic'
+
 import tmi from 'tmi.js'
 
 //require('dotenv').config()
