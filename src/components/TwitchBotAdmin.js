@@ -25,7 +25,7 @@ class TwitchBotAdmin extends React.Component {
       if (this.state.connected === true){
             let client = this.state.client
             let toSend = "/me " + message
-            client.say("#sleepiest_", toSend)
+            client.say(process.env.REACT_APP_CHANNEL_TO_JOIN, toSend)
       }
       console.log(message,'this is what the bot says')
     }
@@ -42,7 +42,7 @@ class TwitchBotAdmin extends React.Component {
             username: process.env.REACT_APP_BOT_NAME,
             password: process.env.REACT_APP_AUTH_TOKEN
         },
-        channels: [ "#sleepiest_" ]
+        channels: [ process.env.REACT_APP_CHANNEL_TO_JOIN ]
      
     }
        
