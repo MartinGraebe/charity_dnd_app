@@ -15,10 +15,10 @@ Needs:
 
 These can be added by creating a .env file in the root directory with the following Variables:
 
-REACT_APP_JG_ID
-REACT_APP_FUND_PAGE
-REACT_APP_BOT_NAME
-REACT_APP_AUTH_TOKEN
+REACT_APP_JG_ID,
+REACT_APP_FUND_PAGE,
+REACT_APP_BOT_NAME,
+REACT_APP_AUTH_TOKEN,
 REACT_APP_CHANNEL_TO_JOIN
 
 To Build:
