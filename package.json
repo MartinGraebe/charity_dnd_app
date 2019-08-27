@@ -9,11 +9,9 @@
     "dotenv": "^7.0.0",
     "electron-json-storage": "^4.1.6",
     "gsap": "^2.1.2",
-    "lodash": "^4.17.15",
-    "lodash.template": "^4.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.1.0",
     "react-sweet-progress": "^1.1.2",
     "tmi.js": "^1.4.2",
     "winwheel": "^1.0.1"
