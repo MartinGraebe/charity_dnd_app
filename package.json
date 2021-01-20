@@ -8,7 +8,7 @@
   "dependencies": {
     "dotenv": "^7.0.0",
     "electron-json-storage": "^4.1.6",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.1.0",
