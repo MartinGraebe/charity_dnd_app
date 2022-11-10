@@ -44,7 +44,7 @@
     "@babel/core": "^7.5.5",
     "@rescripts/cli": "0.0.10",
     "@rescripts/rescript-env": "0.0.10",
-    "electron": "^7.2.4",
+    "electron": "^18.3.7",
     "electron-builder": "^20.39.0",
     "electron-store": "^3.2.0",
     "typescript": "^3.4.5"
